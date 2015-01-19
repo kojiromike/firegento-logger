@@ -1,0 +1,25 @@
+{
+	"require": {
+		"magento-hackathon/magento-composer-installer": "*",
+		"magento-hackathon/composer-command-integrator": "*",
+		"firegento/logger": "*"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "/git/firegento-logger"
+		},
+		{
+			"type": "composer",
+			"url": "http://packages.firegento.com"
+		}
+	],
+	"extra": {
+		"composer-command-registry": [
+			"MagentoHackathon\\Composer\\Magento\\Command\\DeployCommand"
+		],
+		"magento-root-dir": "."
+	}
+}

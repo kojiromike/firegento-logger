@@ -113,11 +113,13 @@ class FireGento_Logger_Model_Logstash extends Zend_Log_Writer_Abstract
         /* @var $helper FireGento_Logger_Helper_Data */
         $helper = Mage::helper('firegento_logger');
 
+        $errorNumber=3;
+
         $fp = fsockopen(
             sprintf('%s://%s', $this->_logstashProtocol, $this->_logstashServer),
             $this->_logstashPort,
             $errorNumber,
-            $errorMessage,
+            $message,
             $this->_timeout
         );
 
